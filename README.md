@@ -34,60 +34,60 @@ $ pod update StanwoodCore
 
 ## Usage
 
-### Importing frameworks
+#### Importing frameworks
 
 ```swift
 #if DEBUG
     import StanwoodUITestingCore
 #endif
 ```
-### Add a listener instance of `UITestingCoreListener`
+#### Add a listener instance of `UITestingCoreListener`
 
 ```swift
 #if DEBUG
     private var listener: UITestingCoreListener!
 #endif
 ```
-### Listen for events and update Firebase live database instance
+#### Listen for events and update Firebase live database instance
 
 ```swift
 #if DEBUG
-listener = UITestingCoreListener()
+    listener = UITestingCoreListener()
 
-DispatchQueue.global(qos: .background).async {
+    DispatchQueue.global(qos: .background).async {
 
-    // Listening to view events
-    self.listener.listen { (item) in
+        // Listening to view events
+        self.listener.listen { (item) in
 
-        // Setting a Database instance
-        let dataBase = Database.database()
-        var ref = dataBase.reference()
-        ref = ref.child("uitesting_hierarchy")
+            // Setting a Database instance
+            let dataBase = Database.database()
+            var ref = dataBase.reference()
+            ref = ref.child("uitesting_hierarchy")
 
-        // Observing previous core versions
-        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            // Observing previous core versions
+            ref.observeSingleEvent(of: .value, with: { (snapshot) in
 
-            // Checking if the version exists
-            guard let value = snapshot.value as? [String: Any],
-                let data = try? JSONSerialization.data(withJSONObject: value, options: .prettyPrinted)  else {
-                    let currentItems = UITestingCoreItems(versions: [item])
+                // Checking if the version exists
+                guard let value = snapshot.value as? [String: Any],
+                    let data = try? JSONSerialization.data(withJSONObject: value, options: .prettyPrinted)  else {
+                        let currentItems = UITestingCoreItems(versions: [item])
+                        if let payload = currentItems.payload() {
+                            ref.setValue(payload)
+                        }
+                        return
+                }
+
+                // Updating the current version
+                if var currentItems = try? JSONDecoder().decode(UITestingCoreItems.self, from: data) {
+                    currentItems.append(item)
+
                     if let payload = currentItems.payload() {
                         ref.setValue(payload)
                     }
-                    return
-            }
-
-            // Updating the current version
-            if var currentItems = try? JSONDecoder().decode(UITestingCoreItems.self, from: data) {
-                currentItems.append(item)
-
-                if let payload = currentItems.payload() {
-                    ref.setValue(payload)
                 }
-            }
-        })
+            })
+        }
     }
-}
 #endif
 ```
 ## Licence
