@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03244276A754BC8D9866738F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		03244276A754BC8D9866738F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		443D22428956D5BB15C36752 /* Pods_StanwoodUITestingCore_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StanwoodUITestingCore_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EB003128CC559B8F4592A50 /* Pods-StanwoodUITestingCore_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StanwoodUITestingCore_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StanwoodUITestingCore_Tests/Pods-StanwoodUITestingCore_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* StanwoodUITestingCore_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StanwoodUITestingCore_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,9 +42,9 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		7F8A918D53C6210A9EE4E44C /* Pods_StanwoodUITestingCore_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StanwoodUITestingCore_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9E277EEFD6B898A330378347 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		9E277EEFD6B898A330378347 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		A8C58E4CC3F984DC4922C3C2 /* Pods-StanwoodUITestingCore_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StanwoodUITestingCore_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StanwoodUITestingCore_Tests/Pods-StanwoodUITestingCore_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		AE5853D7BE0BE7723F06F92E /* StanwoodUITestingCore.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = StanwoodUITestingCore.podspec; path = ../StanwoodUITestingCore.podspec; sourceTree = "<group>"; };
+		AE5853D7BE0BE7723F06F92E /* StanwoodUITestingCore.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = StanwoodUITestingCore.podspec; path = ../StanwoodUITestingCore.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		ED079878CD9FE4D9C6377312 /* Pods-StanwoodUITestingCore_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StanwoodUITestingCore_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-StanwoodUITestingCore_Example/Pods-StanwoodUITestingCore_Example.release.xcconfig"; sourceTree = "<group>"; };
 		FF786B7957C49C3696D0AD07 /* Pods-StanwoodUITestingCore_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StanwoodUITestingCore_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StanwoodUITestingCore_Example/Pods-StanwoodUITestingCore_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
