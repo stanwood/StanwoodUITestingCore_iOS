@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'StanwoodUITestingCore_Example' do
+  pod 'StanwoodUITestingCore', :path => '../'
+
+  target 'StanwoodUITestingCore_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
