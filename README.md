@@ -54,7 +54,7 @@ $ pod update StanwoodCore
 #if DEBUG
     listener = UITestingCoreListener()
 
-    DispatchQueue.global(qos: .background).async {
+    DispatchQueue.global(qos: .background).async { [unowned self] in
 
         // Listening to view events
         self.listener.listen { (item) in
