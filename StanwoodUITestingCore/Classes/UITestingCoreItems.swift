@@ -31,7 +31,7 @@ public struct UITestingCoreItems: Codable {
      Appends a new versios  item
      
      - Parameters:
-     - version: `UITestingCoreVersion` version
+        - version: `UITestingCoreVersion` version
      
      - SeeAlso: UITestingCoreVersion
      */
@@ -47,7 +47,7 @@ public struct UITestingCoreItems: Codable {
      Returns the index of a version item
      
      - Parameters:
-     - version: `UITestingCoreVersion` version
+        - version: `UITestingCoreVersion` version
      
      - Returns: version index
      
