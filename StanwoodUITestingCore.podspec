@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
     StanwoodUITestingCore records view events to draw a view hierarchy to support StanwoodUITesting tool
     DESC
     
-    s.homepage         = 'https://github.com/stanwood/StanwoodUITestingCore'
+    s.homepage         = 'https://github.com/stanwood/StanwoodUITestingCore_iOS'
     s.license          = { :type => 'Private', :file => 'LICENSE' }
     s.author           = { 'Tal Zion' => 'talezion@gmail.com' }
     s.source           = { :git => 'git@github.com:stanwood/StanwoodUITestingCore_iOS.git', :tag => s.version.to_s }
