@@ -20,7 +20,7 @@ public struct UITestingCoreVersion: Codable, Equatable {
      Appends a new versios  item
      
      - Parameters:
-     - window: `UITestingCoreWindow` version
+        - window: `UITestingCoreWindow` version
      
      - SeeAlso: UITestingCoreWindow
      */
@@ -36,7 +36,7 @@ public struct UITestingCoreVersion: Codable, Equatable {
      Returns the index of a window item
      
      - Parameters:
-     - windowString: current window string
+        - windowString: current window string
      
      - Returns: window index
      */
