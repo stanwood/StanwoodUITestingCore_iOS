@@ -7,36 +7,20 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'StanwoodUITestingCore'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of StanwoodUITestingCore.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
-
-  s.homepage         = 'https://github.com/talezion/StanwoodUITestingCore'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'talezion' => 'talezion@gmail.com' }
-  s.source           = { :git => 'https://github.com/talezion/StanwoodUITestingCore.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
-  s.ios.deployment_target = '8.0'
-
-  s.source_files = 'StanwoodUITestingCore/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'StanwoodUITestingCore' => ['StanwoodUITestingCore/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+    s.name             = 'StanwoodUITestingCore'
+    s.version          = '0.1'
+    s.summary          = 'StanwoodUITestingCore records view events.'
+    
+    s.description      = <<-DESC
+    StanwoodUITestingCore records view events to draw a view hierarchy to support StanwoodUITesting tool
+    DESC
+    
+    s.homepage         = 'https://github.com/stanwood/StanwoodUITestingCore'
+    s.license          = { :type => 'Private', :file => 'LICENSE' }
+    s.author           = { 'Tal Zion' => 'talezion@gmail.com' }
+    s.source           = { :git => 'git@github.com:stanwood/StanwoodUITestingCore.git', :tag => s.version.to_s }
+    
+    s.ios.deployment_target = '9.0'
+    
+    s.source_files = 'StanwoodUITestingCore/Classes/**/*'
 end
