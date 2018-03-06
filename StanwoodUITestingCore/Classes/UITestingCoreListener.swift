@@ -8,14 +8,14 @@
 import Foundation
 
 /// UITesting listner completion block for view changes
-public typealias UITestingListener = (_ item: UITestingCoreVersion) -> Void
+public typealias UITestingListenerCompletion = (_ item: UITestingCoreVersion) -> Void
 
 /// Core listner contains event items for view changes.
 /// A helper class for the UITesting tool
 public class UITestingCoreListener: NSObject {
     
     /// Listener singleton
-    private var listiner: UITestingListener?
+    private var listiner: UITestingListenerCompletion?
     
     /// :nodoc:
     private var items = UITestingCoreVersion(version: Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "", windows: [])
@@ -30,7 +30,7 @@ public class UITestingCoreListener: NSObject {
     /**
      Listen function will listen for view hierarchy changes events
      */
-    public func listen(_ completion: @escaping UITestingListener) {
+    public func listen(_ completion: @escaping UITestingListenerCompletion) {
         listiner = completion
     }
     
