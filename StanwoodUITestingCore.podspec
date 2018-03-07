@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'StanwoodUITestingCore'
-    s.version          = '0.1'
+    s.version          = '0.1.1'
     s.summary          = 'StanwoodUITestingCore records view events.'
     
     s.description      = <<-DESC
@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
     s.author           = { 'Tal Zion' => 'talezion@gmail.com' }
     s.source           = { :git => 'git@github.com:stanwood/StanwoodUITestingCore_iOS.git', :tag => s.version.to_s }
     
-    s.ios.deployment_target = '9.0'
+    s.ios.deployment_target = '10.0'
     
     s.source_files = 'StanwoodUITestingCore/Classes/**/*'
 end

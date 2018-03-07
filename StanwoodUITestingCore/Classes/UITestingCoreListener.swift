@@ -14,7 +14,10 @@ public typealias UITestingListenerCompletion = (_ item: UITestingCoreVersion) ->
 /// A helper class for the UITesting tool
 public class UITestingCoreListener: NSObject {
     
-    /// Listener singleton
+    /// Listener on/off switch
+    public var shouldListen: Bool = true
+    
+    /// Listener completion block
     private var listiner: UITestingListenerCompletion?
     
     /// :nodoc:
@@ -36,14 +39,18 @@ public class UITestingCoreListener: NSObject {
     
     /// :nodoc:
     @objc public func registerEvents(_ notification: Notification) {
+        
+        // Checking for event
         guard let dictionary = notification.object as? [String: String],
             let key = dictionary["key"],
             let windowString = dictionary["window"],
             let elementString = dictionary["element"],
             let text = dictionary["text"] else { return }
         
+        // Creating a new element
         let element = UITestingCoreElement(key: key, text: text, element: elementString)
         
+        // Checking for a current window
         if let index = items.index(forWindow: windowString) {
             var window = items.windows[index]
             window.elements.append(element)
@@ -53,6 +60,10 @@ public class UITestingCoreListener: NSObject {
             items.append(window)
         }
         
+        // Checking if listener should listen to events
+        guard shouldListen else { return }
+        
+        // Listening
         listiner?(items)
     }
 }
