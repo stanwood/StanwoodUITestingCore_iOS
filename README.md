@@ -21,6 +21,8 @@ Tal Zion tal.zion@stanwood.io
 source 'git@github.com:CocoaPods/Specs.git'
 source 'git@github.com:stanwood/Cocoa_Pods_Specs.git'
 
+platform :ios, '10.0'
+
 pod 'StanwoodUITestingCore', :configurations => ['Debug']
 ```
 
