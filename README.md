@@ -28,7 +28,7 @@ pod 'StanwoodUITestingCore', :configurations => ['Debug']
 
 >Note: Make sure StanwoodUITestingCore is only added to Debug configurations.
 
-## Update
+## Update
 
 ```
 $ pod update StanwoodCore
