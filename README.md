@@ -100,7 +100,7 @@ Auth.auth().signInAnonymously { (user, error) in
 
 #### ON/OFF switch
 
-If you want to disable the listner, call: 
+If you want to disable the listener, call: 
 
 ```swift
 listener.shouldListen = false
