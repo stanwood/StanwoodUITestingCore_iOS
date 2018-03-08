@@ -52,44 +52,58 @@ $ pod update StanwoodCore
 
 ```swift
 #if DEBUG
-    listener = UITestingCoreListener()
-
-    DispatchQueue.global(qos: .background).async { [unowned self] in
-
-        // Listening to view events
-        self.listener.listen { (item) in
-
-            // Setting a Database instance
-            let dataBase = Database.database()
-            var ref = dataBase.reference()
-            ref = ref.child("uitesting_hierarchy")
-
-            // Observing previous core versions
-            ref.observeSingleEvent(of: .value, with: { (snapshot) in
-
-                // Checking if the version exists
-                guard let value = snapshot.value as? [String: Any],
-                    let data = try? JSONSerialization.data(withJSONObject: value, options: .prettyPrinted)  else {
-                        let currentItems = UITestingCoreItems(versions: [item])
-                        if let payload = currentItems.payload() {
-                            ref.setValue(payload)
-                        }
-                        return
+listener = UITestingCoreListener()
+        
+// Auth anonymously
+// Note: Make sure this option is enabled on Firebsae
+Auth.auth().signInAnonymously { (user, error) in
+            
+   DispatchQueue.global(qos: .background).async {
+                
+     // Listening to view events
+     self.listener.listen { (item) in
+                    
+     // Setting a Database instance
+     let dataBase = Database.database()
+     var ref = dataBase.reference()
+     ref = ref.child("uitesting_hierarchy_ios")
+                    
+     // Observing previous core versions
+     ref.observeSingleEvent(of: .value, with: { (snapshot) in
+                        
+         // Checking if the version exists
+         guard let value = snapshot.value as? [String: Any],
+            let data = try? JSONSerialization.data(withJSONObject: value, options: .prettyPrinted)  else {
+                  let currentItems = UITestingCoreItems(versions: [item])
+                  if let payload = currentItems.payload() {
+                      ref.setValue(payload)
+                  }
+                  return
+          }
+                        
+          // Updating the current version
+          if var currentItems = try? JSONDecoder().decode(UITestingCoreItems.self, from: data) {
+               currentItems.append(item)
+                            
+               if let payload = currentItems.payload() {
+                   ref.setValue(payload)
                 }
-
-                // Updating the current version
-                if var currentItems = try? JSONDecoder().decode(UITestingCoreItems.self, from: data) {
-                    currentItems.append(item)
-
-                    if let payload = currentItems.payload() {
-                        ref.setValue(payload)
-                    }
-                }
-            })
-        }
-    }
+           }
+        })      
+      }
+   }
+}
 #endif
 ```
+
+#### ON/OFF switch
+
+If you want to disable the listner, call: 
+
+```swift
+listener.shouldListen = false
+```
+
 ## Licence
 
 StanwoodUITestingCore is a private library. See the [LICENSE](https://github.com/stanwood/StanwoodUITestingCore_iOS/blob/master/LICENSE) file for more info.
