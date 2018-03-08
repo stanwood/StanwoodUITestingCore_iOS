@@ -57,7 +57,7 @@ $ pod update StanwoodCore
 listener = UITestingCoreListener()
         
 // Auth anonymously
-// Note: Make sure this option is enabled on Firebsae
+// Note: Make sure this option is enabled on Firebsae, and only runs on the Debug instance
 Auth.auth().signInAnonymously { (user, error) in
             
    DispatchQueue.global(qos: .background).async {
