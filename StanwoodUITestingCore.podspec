@@ -8,8 +8,8 @@ Pod::Spec.new do |s|
     DESC
     
     s.homepage         = 'https://github.com/stanwood/StanwoodUITestingCore_iOS'
-    s.license          = { :type => 'Private', :file => 'LICENSE' }
-    s.author           = { 'MIT' => 'talezion@gmail.com' }
+    s.license          = { :type => 'MIT', :file => 'LICENSE' }
+    s.author           = { 'Tal Zion' => 'talezion@gmail.com' }
     s.source           = { :git => 'https://github.com/stanwood/StanwoodUITestingCore_iOS.git', :tag => s.version.to_s }
     
     s.ios.deployment_target = '10.0'
