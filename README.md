@@ -1,7 +1,8 @@
 # StanwoodUITestingCore
 
 [![Swift Version](https://img.shields.io/badge/Swift-4.0.x-orange.svg)]()
-[![iOS 8+](https://img.shields.io/badge/iOS-9+-EB7943.svg)]()
+[![iOS 10+](https://img.shields.io/badge/iOS-10+-EB7943.svg)]()
+[![MIT](https://img.shields.io/packagist/l/doctrine/orm.svg)]()
 
 ## Table of contents
 
@@ -18,9 +19,6 @@ Tal Zion tal.zion@stanwood.io
 ## Installation
 
 ```ruby
-source 'git@github.com:CocoaPods/Specs.git'
-source 'git@github.com:stanwood/Cocoa_Pods_Specs.git'
-
 platform :ios, '10.0'
 
 pod 'StanwoodUITestingCore', :configurations => ['Debug']
@@ -108,5 +106,5 @@ listener.shouldListen = false
 
 ## Licence
 
-StanwoodUITestingCore is a private library. See the [LICENSE](https://github.com/stanwood/StanwoodUITestingCore_iOS/blob/master/LICENSE) file for more info.
+StanwoodUITestingCore is under MIT licence. See the [LICENSE](https://github.com/stanwood/StanwoodUITestingCore_iOS/blob/master/LICENSE) file for more info.
 
