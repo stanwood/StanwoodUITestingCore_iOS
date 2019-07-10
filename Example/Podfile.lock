@@ -1,5 +1,5 @@
 PODS:
-  - StanwoodUITestingCore (1.0.0)
+  - StanwoodUITestingCore (1.0.1)
 
 DEPENDENCIES:
   - StanwoodUITestingCore (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  StanwoodUITestingCore: 719d162271e4b627ca1fc017f1872689c5062fdc
+  StanwoodUITestingCore: e41bb646ff0ade79796a708b3e9992f85c591bcf
 
 PODFILE CHECKSUM: d8dbe74c9becaf663ddd79ade0d89dbf80eee92d
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.7.3

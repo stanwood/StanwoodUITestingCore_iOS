@@ -71,6 +71,6 @@ public struct UITestingCoreItems: Codable {
      - SeeAlso: UITestingCoreVersion
      */
     func index(for version: UITestingCoreVersion) -> Int? {
-        return versions.index(of: version)
+        return versions.firstIndex(of: version)
     }
 }
