@@ -60,7 +60,7 @@ public struct UITestingCoreVersion: Codable, Equatable {
      */
     func index(forWindow windowString: String) -> Int? {
         let window = UITestingCoreWindow(window: windowString, elements: [])
-        return windows.index(of: window)
+        return windows.firstIndex(of: window)
     }
     
     /// :nodoc:
