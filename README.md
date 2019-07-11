@@ -3,7 +3,7 @@
 [![Swift Version](https://img.shields.io/badge/Swift-4.0.x-orange.svg)]()
 [![iOS 10+](https://img.shields.io/badge/iOS-10+-EB7943.svg)]()
 [![MIT](https://img.shields.io/packagist/l/doctrine/orm.svg)]()
-
+[![Build Status](https://travis-ci.org/stanwood/StanwoodUITestingCore_iOS.svg?branch=master)](https://travis-ci.org/stanwood/StanwoodUITestingCore_iOS)
 ## Table of contents
 
 - [Author](#author)
